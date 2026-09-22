@@ -1,0 +1,16 @@
+h1{
+    /* background-color: brown; */
+}
+#wrapper
+{
+       
+    border: 10px solid blueviolet;
+    height: 500px; 
+    padding: 40px;
+}
+
+P{
+    color: red;
+    border: 2px solid brown ;
+    margin:auto;
+}

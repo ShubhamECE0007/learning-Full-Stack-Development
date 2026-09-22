@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Brand Theme Colors */
+    --color-primary: #a855f7;
+    --color-primary-glow: rgba(168, 85, 247, 0.25);
+    --color-secondary: #ec4899;
+    --color-secondary-glow: rgba(236, 72, 153, 0.25);
+    --color-accent: #06b6d4;
+
+
+    /* Base & Layout Backgrounds */
+    --color-bg-base: #060709;
+    --color-bg-section: #0c0d14;
+    --color-bg-footer: #161922;
+    --color-surface: #11131a;
+    --color-surface-muted: #1e212f;
+
+
+    /* Borders */
+    --color-border: rgba(255, 255, 255, 0.07);
+
+
+    /* Typography Text Colors */
+    --white: #ffffff;
+    --color-text-body: #cbd5e1;
+    --color-text-muted: #9fa6b2;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 12px 36px rgba(0, 0, 0, 0.7);
+    --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.9);
+    --gradient-accent: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--color-accent) 0%, #3b82f6 100%);
+}
+
+html {
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--white);
+}
+
+
+h1 {
+    font-size: clamp(2.4rem, 6vw, 5rem);
+}
+
+h2 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+}
+
+h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+}
+
+
+small {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+strong {
+    color: var(--white);
+    font-weight: 600;
+}
+
+em {
+    color: var(--color-text-body);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    /* color: inherit; */
+    color: rgb(180, 175, 175);
+    text-decoration: none;
+}
+
+
+body {
+    background-color: var(--color-bg-base);
+    padding: 0 50px;
+}
+
+header {
+    position: fixed;
+    background-color: rgba(4, 4, 4, 0.604);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    left: 60px;
+    right: 60px;
+    border-bottom: 1px solid var(--color-border);
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    text-transform: uppercase;
+    z-index: 10;
+
+}
+
+header nav ul {
+    display: flex;
+    gap: 10px;
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 0.07em;
+    background: var(--gradient-accent);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+
+header nav a {
+    /* display: inline-block; */
+    font-family: var(--font-display);
+    color: var(--color-text-muted);
+    padding: 12px 20px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    text-wrap: nowrap;
+}
+
+header nav a:hover {
+    background-color: rgba(32, 31, 31, 0.605);
+    color: var(--white);
+}
+
+header nav li:last-child a {
+    background-color: var(--color-primary);
+    color: var(--white);
+}
+
+header nav li:last-child a:hover {
+    background-color: var(--color-secondary);
+}
+
+main {
+    
+    padding-top: 80px;
+}
+
+.navbar{
+    display:flex;
+   
+    background-color: var(--color-bg-section);
+    margin-bottom: 20px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    padding:20px 12px;
+    margin-left: 60px;
+    font-size:1.2rem;
+}
+.navbar a{
+    color: var(--color-primary);
+}
+#product-detail {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--color-bg-section);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+figcaption{
+    display:none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+}
+.product-detail-left{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    font-family: var(--font-body);
+    margin-left:12px;
+}
+
+.product-detail-left h2{
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    text-wrap: nowrap;
+
+}
+.product-detail-left strong{
+    font-size: 3rem;
+
+}

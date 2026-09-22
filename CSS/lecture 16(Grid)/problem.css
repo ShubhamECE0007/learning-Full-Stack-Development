@@ -1,0 +1,29 @@
+ 
+.container{
+    display:grid;
+    min-height:50vh;
+    width:1000px;
+    margin:auto;
+    border:1px solid red;
+    grid-template-columns: repeat(3, 1fr);
+    gap:10px 20px;
+
+
+}
+
+.grid-items{
+    background-color:lightblue;
+    border:1px solid black;
+    text-align:center;
+    
+}
+
+.grid-items:nth-child(1){
+    grid-column:1/4;
+}
+.grid-items:nth-child(2){
+    grid-row:2/4;
+}
+.grid-items:nth-child(7){
+    grid-column:1/4;
+}

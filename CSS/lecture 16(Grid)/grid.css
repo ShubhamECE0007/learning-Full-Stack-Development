@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display:grid;
+    
+    width:1000px;
+    height:auto;
+    grid-template-columns:2fr repeat(3, 1fr);
+    /* grid-template-rows:1fr 1fr 1fr 1fr; */
+   
+
+    /* grid-template-rows:repeat(3,1fr); //same functionality as */
+    border: 1px solid black; 
+    gap:10px;
+    
+}
+
+.grid-item{
+    background-color: #1f93cd;
+    border: 1px solid red;
+    height: 100%;
+}

@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box; 
+
+}
+
+
+
+h1{
+    font-size: 50px;
+}
+
+#wrapper{
+ width:500px;height:100vh;
+  border:2px solid black;
+  background-color: rgb(46,246,60)
+}
+section{
+    width:50%;
+    height:50%;
+    background-color:#032a3d;
+    color:white
+}
+
+span{
+    
+}

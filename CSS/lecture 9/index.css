@@ -1,0 +1,53 @@
+/* *{
+    color:blue;
+} */
+
+
+
+span{
+    color: blue;
+    background-color: lightgray;
+}
+ li{
+    list-style-type: disc;
+    color:Red;
+
+}
+.hello{
+    color:green;
+  
+}
+#unique{
+    color:orange;
+}
+/* 
+div > p{
+    color:purple;
+} */
+
+/* a+p{
+    color:red;
+} */
+
+a ~p{
+    color:blue;
+}
+
+h1:hover{
+    color:green;
+}
+
+li:hover{
+     color:blue;
+}
+h1::after{
+    content:" hello";
+}
+li::before{
+    content:"*";
+}
+h1::first-letter{
+    color:red;
+    font-size: 50px;
+}
+
