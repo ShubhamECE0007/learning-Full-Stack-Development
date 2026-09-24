@@ -126,7 +126,11 @@ function addTodo(todo) {
     todoList.append(li);
 }
 
+todoList.addEventListener('click',(e)=>{
+    console.log(e.target)
+})
 
-// renderTodo();
+
+
 
 
