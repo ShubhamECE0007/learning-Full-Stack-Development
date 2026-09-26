@@ -46,12 +46,21 @@
 const inputBox = document.querySelector("#inputBox");
 const addBtn = document.querySelector("#addBtn");
 const todolist = document.querySelector("#todolist");
+let editingTodo = null;
 
 const addTodo = () => {
     const inputText = inputBox.value.trim();
 
     if (inputText.length <= 0) {
         alert("You haven't written anything");
+        return;
+    }
+
+    if (editingTodo) {
+        editingTodo.querySelector("p").textContent = inputText;
+        editingTodo = null;
+        addBtn.textContent = "Add";
+        inputBox.value = "";
         return;
     }
 
@@ -83,12 +92,10 @@ const updateTodo = (e) => {
         e.target.parentElement.remove();
     }
     if(e.target.innerHTML === "Edit"){
-        inputBox.value=inputBox.value = e.target.previousElementSibling.previousElementSibling.innerHTML;
+        editingTodo = e.target.parentElement;
+        inputBox.value = editingTodo.querySelector("p").textContent;
         inputBox.focus();
-        addBtn.value = "Edit"
-        `${inputBox.value}`=
-        
-
+        addBtn.textContent = "Edit";
     }
 
 
